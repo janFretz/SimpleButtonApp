@@ -21,7 +21,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
-        android:text="Wähle zwischen Eintiegspreis und vollem Preis"
+        android:text="Wähle zwischen Einstiegspreis und vollem Preis"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/priceSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/priceDescription"
+        android:src="@android:drawable/ic_menu_myplaces" />
+
+    <TextView
+        android:id="@+id/switchDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Einstiegspreis"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/priceSwitch"
+        app:layout_constraintEnd_toStartOf="@id/priceSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/priceSwitch" />
+
+    <TextView
+        android:id="@+id/priceDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="20dp"
+        android:text="Der Preis für das Produkt **Produktname** beträgt:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
     <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
@@ -43,13 +80,12 @@
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:text="**Einstiegspreis oder Vollpreis in Euro**"
         android:textAlignment="center"
-        android:text="***Hier steht ein Preis mit €-Zeichen***"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/priceSwitch" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
